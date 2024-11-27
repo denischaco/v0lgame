@@ -95,7 +95,7 @@ const Table: React.FC<{ spots: DriverSpot[], onSpotClick: (id: number) => void, 
 const ConfigurationList: React.FC<{ spots: DriverSpot[], conductores: Conductor[] }> = ({ spots, conductores }) => (
   <Card sx={{ mt: 2 }} className="ConfigurationListDEBUG">
     <CardContent>
-      <Typography variant="h6" gutterBottom>Current Configuration</Typography>
+      <Typography variant="h6" gutterBottom>Configuración actual:</Typography>
       <List>
         {spots.map((spot) => (
           <ListItem key={`config-${spot.id}`}>
@@ -104,7 +104,7 @@ const ConfigurationList: React.FC<{ spots: DriverSpot[], conductores: Conductor[
                 {spot.driver ? (
                   <img src={conductores.find(c => c.id === spot.driver)?.avatar} alt={conductores.find(c => c.id === spot.driver)?.nombre} style={{ width: '100%', height: '100%' }} />
                 ) : (
-                  <Typography variant="body2">Empty</Typography>
+                  <Typography variant="body2">Vacío</Typography>
                 )}
               </Avatar>
             </ListItemAvatar>
@@ -383,7 +383,7 @@ export default function DriverGame() {
     <Container maxWidth="lg" sx={{ py: 4, bgcolor: '#00184C' }}>
       <AppBar position="static" sx={{ mb: 4, bgcolor: '#D71D17' }}>
         <Toolbar>
-          <Typography variant="h6" className='header_juego'>CONFGURÁ LA MESA</Typography>
+          <Typography variant="h6" className='header_juego'>CONFIGURÁ LA MESA</Typography>
         </Toolbar>
       </AppBar>
       <Box sx={{ position: 'relative' }}>
