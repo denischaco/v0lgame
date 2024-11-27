@@ -159,8 +159,8 @@ const History: React.FC<{ history: HistoryEntry[] }> = ({ history }) => (
         {history.map((entry, index) => (
           <ListItem key={`history-${index}`}>
             <ListItemText
-              primary={`Attempt ${index + 1}`}
-              secondary={`Button: ${entry.buttonUsed}, Result: ${entry.result}, Previous Score: ${entry.previousScore}, Points Earned: ${entry.pointsEarned}, New Score: ${entry.newScore}`}
+              primary={`Jugada ${index + 1}`}
+              secondary={`Botón: ${entry.buttonUsed}, Resultado: ${entry.result}, Puntaje antes: ${entry.previousScore}, Resultado: ${entry.pointsEarned}, Nuevo Puntaje: ${entry.newScore}`}
             />
           </ListItem>
         ))}
