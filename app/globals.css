@@ -3,17 +3,28 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Bree Serif", serif;
 }
 
 .boton_cartas_spots{
   max-width: 80%;
   margin-left: 10%;
-  background: #A155B8;
+  background: #8443c8;
   color: white;
 }
+.titulo_videos>span{
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Bree Serif", serif;
+}
+.titulo_videos>p{
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Bree Serif", serif;
+}
+
 .fondo{
-  background:#0575D0;
+  background:#0069ae;
 }
 
 .ConfigurationListDEBUG{
@@ -23,16 +34,21 @@ body {
 .titulo_juego{
   color:white;
   font-size: 40px;
-  font-family: "Bree Serif";
+  font-family: "Bree Serif", serif;
   text-align: center;
   font-weight: bolder;
 }
 .header_juego{
   color:white;
   font-size: 40px;
-  font-family: "Bree Serif";
+  font-family: "Bree Serif", serif;
   text-align: center;  
   font-weight: bolder;
+  background-color: #ff084a;
+}
+
+.contenedor_juego{
+  background:#ffffff;
 }
 @layer utilities {
   .text-balance {

@@ -132,7 +132,7 @@ const ProgramList: React.FC<{ programs: Programa[], conductores: Conductor[] }> 
       <List>
         {programs.map((program) => (
           <ListItem key={program.id}>
-            <ListItemText
+            <ListItemText className='titulo_videos'
               primary={program.titulo}
               secondary={
                 <>
@@ -366,7 +366,7 @@ export default function DriverGame() {
         }}
         PaperProps={{
           style: {
-            backgroundColor: modalMessage === 'CARGANDO INFO DE PROGRAMAS' ? 'rgba(72, 157, 1, 0.8)' : 'rgba(215, 29, 23, 0.8)',
+            backgroundColor: modalMessage === 'CARGANDO INFO DE PROGRAMAS' ? '#ff084a' : 'rgba(215, 29, 23, 0.8)',
           },
         }}
       >
@@ -380,10 +380,10 @@ export default function DriverGame() {
   }
 
   return (
-    <Container maxWidth="lg" sx={{ py: 4, bgcolor: '#00184C' }}>
-      <AppBar position="static" sx={{ mb: 4, bgcolor: '#D71D17' }}>
+    <Container className="contenedor_juego" maxWidth="lg" sx={{ py: 4, bgcolor: '#00184C' }}>
+      <AppBar position="static" sx={{ mb: 4, bgcolor: '#D71D17' }} className='header_juego'>
         <Toolbar>
-          <Typography variant="h6" className='header_juego'>CONFIGURÁ LA MESA</Typography>
+          <Typography variant="h6" >CONFIGURÁ LA MESA</Typography>
         </Toolbar>
       </AppBar>
       <Box sx={{ position: 'relative' }}>
@@ -395,7 +395,7 @@ export default function DriverGame() {
         <Grid item>
           <Button 
             variant="contained" 
-            sx={{ bgcolor: '#489D01', '&:hover': { bgcolor: '#005E23' } }}
+            sx={{ bgcolor: '#489D01', '&:hover': { bgcolor: '#000000' } }}
             onClick={() => checkOutcome(true, false)}
           >
             OCURRIÓ
@@ -404,7 +404,7 @@ export default function DriverGame() {
         <Grid item>
           <Button 
             variant="contained" 
-            sx={{ bgcolor: '#D71D17', '&:hover': { bgcolor: '#F9A31A' } }}
+            sx={{ bgcolor: '#ff084a', '&:hover': { bgcolor: '#000000' } }}
             onClick={() => checkOutcome(false, false)}
           >
             NO OCURRIÓ
@@ -413,7 +413,7 @@ export default function DriverGame() {
         <Grid item>
           <Button 
             variant="contained" 
-            sx={{ bgcolor: '#006DC5', '&:hover': { bgcolor: '#F9A31A' } }}
+            sx={{ bgcolor: '#0069ae', '&:hover': { bgcolor: '#000000' } }}
             onClick={() => checkOutcome(true, true)}
           >
             OCURRIO EN ESE ORDEN!
